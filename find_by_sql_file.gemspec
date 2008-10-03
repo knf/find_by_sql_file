@@ -29,6 +29,6 @@ Gem::Specification.new do |s|
                       rails/init.rb ]
 
   s.has_rdoc         = true
-  s.rdoc_options     = %w[ --main README.markdown ]
   s.extra_rdoc_files = %w[ README.markdown        ]
+  s.rdoc_options     = %w[ --main README.markdown ]
 end
