@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'find_by_sql_file'
-  s.version     = '0.9.1'
-  s.date        = '2008-10-02'
+  s.version     = '0.9.2'
+  s.date        = '2008-10-03'
 
   s.author      = 'Jordi Bunster'
   s.email       = 'jordi@bunster.org'
