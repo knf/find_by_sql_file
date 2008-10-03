@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'find_by_sql_file'
-  s.version     = '0.9.2'
+  s.version     = '0.9.3'
   s.date        = '2008-10-03'
 
   s.author      = 'Jordi Bunster'
@@ -25,6 +25,8 @@ Gem::Specification.new do |s|
                       lib/bunster
                       lib/bunster/erb_jacket.rb
                       lib/bunster/find_by_sql_file.rb
+                      lib/find_by_sql_file.rb
+                      lib/jordi-find_by_sql_file.rb
                       rails
                       rails/init.rb ]
 

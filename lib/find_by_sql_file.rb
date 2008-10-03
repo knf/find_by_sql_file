@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), 'bunster', 'find_by_sql_file')
+require 'bunster/find_by_sql_file'
 
 class << ActiveRecord::Base
   include Bunster::FindBySqlFile
