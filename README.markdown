@@ -2,6 +2,12 @@
 
 This plugin extends the API of `ActiveRecord::Base.find_by_sql`.
 
+## A Warning
+
+Besides the warnings on the `ERB` section below (don't ignore those), this
+code is not tested at all, and has no track record whatsoever. So there,
+beware.
+
 ## Usage
 
 Instead of passing the SQL statement as a string...
@@ -13,11 +19,18 @@ You can pass a symbol that refers to a query file stored in
 
     Elephant.find_by_sql :massive_weight
 
-## A Warning
+## Installation instructions
 
-Besides the warnings on the `ERB` section below (don't ignore those), this
-code is not tested at all, and has no track record whatsoever. So there,
-beware.
+Via rubygems:
+
+    sudo gem install jordi-find_by_sql_file --source http://gems.github.com
+
+    # Add the following to config/environment.rb:
+    config.gem 'jordi-find_by_sql_file', :source => 'http://gems.github.com'
+
+As a Rails plugin:
+
+    ./script/install plugin git://github.com/jordi/find_by_sql_file.git
 
 ## Motivation
 
