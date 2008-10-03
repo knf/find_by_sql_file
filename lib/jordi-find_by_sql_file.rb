@@ -1,0 +1,1 @@
+require File.join(File.dirname(__FILE__), 'find_by_sql_file')
