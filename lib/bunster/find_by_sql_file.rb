@@ -1,6 +1,7 @@
+require 'bunster/erb_jacket'
+
 module Bunster # :nodoc:
   module FindBySqlFile
-
     # The path to the directory query queries will be found, organized
     # inside directories named like their main tables (or 'application'
     # for shared queries)
@@ -23,7 +24,7 @@ module Bunster # :nodoc:
         bound_variables = HashWithIndifferentAccess.new(opts).symbolize_keys!
         injected_locals = bound_variables.delete(:inject!) || []
 
-        query = ERBJacket.wrap File.read(file_name), injected_locals
+        query = Bunster::ERBJacket.wrap File.read(file_name), injected_locals
         query = replace_named_bind_variables(query, bound_variables)
 
         query.gsub(/--.*/, '').squish!
