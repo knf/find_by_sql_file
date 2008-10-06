@@ -35,5 +35,10 @@ module Bunster # :nodoc:
         query_or_symbol
       end
     end
+
+    # The equivalent of ActiveRecord::Base#find_by_sql(*args).first
+    def find_one_by_sql(*args)
+      find_by_sql(*args).first
+    end
   end
 end
