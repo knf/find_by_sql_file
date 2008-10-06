@@ -1,0 +1,6 @@
+* What's new in version 0.9.5 (2008-10-06):
+
+  - Added a WHATSNEW file :)
+  - Added a few behaviour tests
+  - Added ActiveRecord::Base#find_one_by_sql(*args) as sugar for
+    ActiveRecord::Base#find_by_sql(*args).first

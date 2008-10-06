@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'find_by_sql_file'
-  s.version     = '0.9.4'
-  s.date        = '2008-10-03'
+  s.version     = '0.9.5'
+  s.date        = '2008-10-06'
 
   s.author      = 'Jordi Bunster'
   s.email       = 'jordi@bunster.org'
@@ -14,21 +14,37 @@ Gem::Specification.new do |s|
                      and ERB are available, and comments and indentation are
                      stripped. }.strip!.gsub! /\s+/, ' '
 
-  s.test_files  = %w[ test test/find_by_sql_file_test.rb ]
-  s.files       = %w[ MIT-LICENSE
-                      README.markdown
-                      Rakefile
-                      find_by_sql_file.gemspec
-                      init.rb
-                      install.rb
-                      lib
-                      lib/bunster
-                      lib/bunster/erb_jacket.rb
-                      lib/bunster/find_by_sql_file.rb
-                      lib/find_by_sql_file.rb
-                      lib/jordi-find_by_sql_file.rb
-                      rails
-                      rails/init.rb ]
+  s.test_files  = %w[
+    test
+    test/database.yml
+    test/find_by_sql_file_test.rb
+    test/mock_rails_root
+    test/mock_rails_root/app
+    test/mock_rails_root/app/queries
+    test/mock_rails_root/app/queries/articles
+    test/mock_rails_root/app/queries/articles/all.sql
+    test/mock_rails_root/app/queries/articles/last_updated.sql
+    test/mock_rails_root/app/queries/articles/with_erb_fields.sql
+    test/mock_rails_root/app/queries/articles/with_variables.sql
+    test/schema.rb
+    test/test_helper.rb
+  ]
+
+  s.files = %w[ MIT-LICENSE
+                README.markdown
+                Rakefile
+                WHATSNEW
+                find_by_sql_file.gemspec
+                init.rb
+                install.rb
+                lib
+                lib/bunster
+                lib/bunster/erb_jacket.rb
+                lib/bunster/find_by_sql_file.rb
+                lib/find_by_sql_file.rb
+                lib/jordi-find_by_sql_file.rb
+                rails
+                rails/init.rb ]
 
   s.has_rdoc         = true
   s.extra_rdoc_files = %w[ README.markdown        ]
