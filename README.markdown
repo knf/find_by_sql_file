@@ -38,13 +38,34 @@ The advantage of the latter approach is that the SQL file can be properly
 indented and commented (the indentation and comments are stripped from the
 logs.)
 
+## Features & Problems
+
+### Comment removal
+
+As far as comment removal, only double-dash-space single-line comments are
+stripped, like so:
+
+    SELECT foo, -- We need this for X reason
+           bar, -- and this for some Y reason
+           bez,  # This comment will NOT be removed, and will be a problem
+           duh  /* And neither will this one. Use -- style only */
+
+           FROM table;
+
+So, to clarify, the start-comment marker is `-- ` (two dashes and a space).
+That I know of, this marker works in MySQL, PostgreSQL, SQLite, Oracle, DB2,
+and SQL Server. While not all of these require the space after the dashes,
+it never hurts.
+
+### Bind variables
+
 It's possible to pass named bind variables, much like in the conditions
 parameter of `ActiveRecord::Base.find`, by passing a hash as the second
 parameter, like so:
 
     Elephant.find_by_sql :specifics, :color => 'grey', :weight => 6800
 
-## ERB (be careful)
+### ERB (be careful)
 
 It is also possible to use `ERB` inside the query file, but **beware!**
 Unlike the named bind variables, any data passed in via the ERB method is not
@@ -63,6 +84,6 @@ can then be used with the usual ERB syntax, like so:
 
     SELECT <%= @field -%> FROM elephants WHERE <%= @field -%> = :value
 
-### Legal
+## Legal
 
 Copyright (c) 2008 Jordi Bunster, released under the MIT license
