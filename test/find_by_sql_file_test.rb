@@ -67,4 +67,8 @@ class FindBySqlFileTest < Test::Unit::TestCase
 
     @articles.each { |a| a.save }
   end
+
+  def teardown
+    Article.delete_all
+  end
 end
