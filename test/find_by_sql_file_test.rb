@@ -42,6 +42,11 @@ class FindBySqlFileTest < Test::Unit::TestCase
       Article.find(:all, :select => fields).map { |a| a.attributes } )
   end
 
+  def test_query_reformatting
+    assert_equal 'SELECT * FROM articles ORDER BY updated_at DESC LIMIT 1',
+                 Article.sql_file(:last_updated)
+  end
+
   def setup
     @articles = []
 
