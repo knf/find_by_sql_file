@@ -1,4 +1,9 @@
-* What's new in version 0.9.5 (2008-10-06):
+* x.x.x (unreleased):
+
+  - Added a task for running RCOV over the tests
+  - Added a test for the count_by_sql_with_sql_file feature
+
+* 0.9.5 (2008-10-06):
 
   - Added a WHATSNEW file :)
   - Added a few behaviour tests
