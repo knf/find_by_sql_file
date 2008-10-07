@@ -8,7 +8,7 @@ Besides the warnings on the `ERB` section below (don't ignore those), this
 code is not very well tested (RCOV shows 100% coverage, but that doesn't
 mean much), and has no track record whatsoever. So there, beware.
 
-## Usage
+## Example Usage
 
 Instead of passing the SQL statement as a string...
 
@@ -34,9 +34,9 @@ As a Rails plugin:
 
 ## Motivation
 
-The advantage of the latter approach is that the SQL file can be properly
-indented and commented (the indentation and comments are stripped from the
-logs.)
+The advantage of the external file approach is that the SQL file can be
+properly indented and commented (the indentation and comments are stripped
+from the logs.)
 
 ## Features & Problems
 
