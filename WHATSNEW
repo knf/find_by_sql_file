@@ -1,7 +1,7 @@
 * x.x.x (unreleased):
 
   - Changed the comment marker to be '-- ' (two dashes and a space)
-  - Better documentation about comments
+  - Improved documentation about comments, and plugin/gem usage methods
   - Added a task for running RCOV over the tests
   - Added a test for the count_by_sql_with_sql_file feature
 

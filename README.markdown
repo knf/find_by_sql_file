@@ -25,10 +25,15 @@ Via rubygems:
 
     sudo gem install jordi-find_by_sql_file --source http://gems.github.com
 
-    # Add the following to config/environment.rb:
+    # Then, to use as a GemPlugin in Rails, add to config/environment.rb:
     config.gem 'jordi-find_by_sql_file', :source => 'http://gems.github.com'
 
-As a Rails plugin:
+    # Or, to use outside of Rails, for now (better API coming soon):
+    require 'active_record'
+    RAILS_ROOT = '/some/folder/'
+    require 'find_by_sql_file'
+
+As a traditional Rails plugin:
 
     ./script/install plugin git://github.com/jordi/find_by_sql_file.git
 
