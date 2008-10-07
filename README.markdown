@@ -5,8 +5,8 @@ This plugin extends the API of `ActiveRecord::Base.find_by_sql`.
 ## A Warning
 
 Besides the warnings on the `ERB` section below (don't ignore those), this
-code is not tested at all, and has no track record whatsoever. So there,
-beware.
+code is not very well tested (RCOV shows 100% coverage, but that doesn't
+mean much), and has no track record whatsoever. So there, beware.
 
 ## Usage
 
