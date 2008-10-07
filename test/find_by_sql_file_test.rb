@@ -11,6 +11,10 @@ require File.join(File.dirname(__FILE__), 'test_helper')
 
 class FindBySqlFileTest < Test::Unit::TestCase
 
+  def test_counting_by_sql_file
+    assert_equal Article.count_by_sql(:count_all), Article.count
+  end
+
   def test_find_all
     assert_equal Article.find_by_sql(:all), Article.find(:all)
   end

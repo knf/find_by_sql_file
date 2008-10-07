@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
     test/mock_rails_root/app/queries
     test/mock_rails_root/app/queries/articles
     test/mock_rails_root/app/queries/articles/all.sql
+    test/mock_rails_root/app/queries/articles/count_all.sql
     test/mock_rails_root/app/queries/articles/last_updated.sql
     test/mock_rails_root/app/queries/articles/with_erb_fields.sql
     test/mock_rails_root/app/queries/articles/with_variables.sql
