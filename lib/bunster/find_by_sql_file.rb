@@ -2,7 +2,7 @@ require 'bunster/erb_jacket'
 
 module Bunster # :nodoc:
   module FindBySqlFile
-    # The path to the directory query queries will be found, organized
+    # The path to the directory where queries will be found, organized
     # inside directories named like their main tables (or 'application'
     # for shared queries)
     SQL_PATH = File.join RAILS_ROOT, 'app', 'queries'
