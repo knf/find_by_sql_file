@@ -20,11 +20,6 @@ module FindBySqlFile
     end
   end
 
-  # The path to the directory where queries will be found, organized
-  # inside directories named like their main tables (or 'application'
-  # for shared queries)
-  SQL_PATH = File.join RAILS_ROOT, 'app', 'queries'
-
   def find_by_sql_with_sql_file(query_or_symbol, opts = {}) # :nodoc:
     find_by_sql_without_sql_file sql_file(query_or_symbol, opts)
   end
@@ -36,7 +31,7 @@ module FindBySqlFile
   def sql_file(query_or_symbol, opts = {}) # :nodoc:
     if query_or_symbol.is_a? Symbol
 
-      file_name = File.join SQL_PATH,
+      file_name = Rails.root.join 'app', 'queries',
         (table_name rescue 'application'), (query_or_symbol.to_s + '.sql')
 
       bound_variables = HashWithIndifferentAccess.new(opts).symbolize_keys!

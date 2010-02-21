@@ -1,5 +1,6 @@
 require 'test/unit'
 require 'yaml'
+require 'pathname'
 require 'rubygems'
 require 'active_record'
 
@@ -9,18 +10,22 @@ rescue LoadError
   puts "Install the 'leftright' gem (optional) to get awesome test output"
 end
 
-def establish_connection!
-  database_config_file   = File.join File.dirname(__FILE__), 'database.yml'
-  database_configuration = YAML::load File.open(database_config_file)
-
-  ActiveRecord::Base.establish_connection database_configuration
+module Rails
+  def self.root
+    Pathname.new File.join(File.dirname(__FILE__), 'mock_rails_root')
+  end
 end
 
-def create_tables!
-  load File.join( File.dirname(__FILE__), 'schema.rb' )
+ActiveRecord::Base.establish_connection :adapter  => 'sqlite3',
+                                        :database => ':memory:'
+
+ActiveRecord::Schema.define :version => 1 do
+  create_table :articles, :force => true do |article|
+    article.string    :title
+    article.boolean   :published
+    article.date      :created_on
+    article.timestamp :updated_at
+  end
 end
 
-establish_connection!
-create_tables!
-RAILS_ROOT = File.join( File.dirname(__FILE__), 'mock_rails_root' )
-require File.join(File.dirname(__FILE__), '..', 'lib', 'find_by_sql_file')
+require 'find_by_sql_file'
