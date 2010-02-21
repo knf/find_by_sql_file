@@ -12,7 +12,7 @@ end
 
 module Rails
   def self.root
-    Pathname.new File.join(File.dirname(__FILE__), 'mock_rails_root')
+    Pathname.new File.join(File.dirname(__FILE__), 'rails_root_fixture')
   end
 end
 
