@@ -1,4 +1,5 @@
 require 'erb'
+require 'active_record'
 
 module FindBySqlFile
   # This makes it a tad simpler to create a clean ERB binding context. It

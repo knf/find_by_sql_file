@@ -2,7 +2,6 @@ require 'test/unit'
 require 'yaml'
 require 'pathname'
 require 'rubygems'
-require 'active_record'
 
 begin
   require 'leftright'
@@ -16,6 +15,8 @@ module Rails
   end
 end
 
+require 'find_by_sql_file'
+
 ActiveRecord::Base.establish_connection :adapter  => 'sqlite3',
                                         :database => ':memory:'
 
@@ -27,5 +28,3 @@ ActiveRecord::Schema.define :version => 1 do
     article.timestamp :updated_at
   end
 end
-
-require 'find_by_sql_file'
