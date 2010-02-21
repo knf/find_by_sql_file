@@ -1,10 +1,8 @@
-* x.x.x (unreleased):
+* 0.9.9 (2010-02-21):
 
   - Changed the comment marker to be '-- ' (two dashes and a space)
-  - Improved documentation about comments, and plugin/gem usage methods
-  - Added a task for running RCOV over the tests
-  - Added a test for the count_by_sql_with_sql_file feature
-  - Added a test for the implementation of the query reformatting feature
+  - Tested under Ruby 1.8.7 and 1.9.1
+  - Tested under ActiveRecord 2.3 and 3.0beta
 
 * 0.9.5 (2008-10-06):
 
