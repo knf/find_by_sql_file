@@ -27,7 +27,7 @@ module Bunster # :nodoc:
         query = Bunster::ERBJacket.wrap File.read(file_name), injected_locals
         query = replace_named_bind_variables(query, bound_variables)
 
-        query.gsub(/-- .*/, '').squish!
+        query.gsub(/-- .*/, '').strip.gsub(/\s+/, ' ')
       else
         raise %' Additional parameters only supported when using a query
           file (pass a symbol, not a string) '.squish! unless opts.blank?
