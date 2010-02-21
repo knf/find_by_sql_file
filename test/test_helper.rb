@@ -3,6 +3,12 @@ require 'test/unit'
 require 'active_record'
 require 'yaml'
 
+begin
+  require 'leftright'
+rescue LoadError
+  puts "Install the 'leftright' gem to get awesome test output"
+end
+
 def establish_connection!
   database_config_file   = File.join File.dirname(__FILE__), 'database.yml'
   database_configuration = YAML::load File.open(database_config_file)
