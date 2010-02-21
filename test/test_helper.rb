@@ -1,6 +1,7 @@
-require 'yaml'
 require 'rubygems'
+require 'test/unit'
 require 'active_record'
+require 'yaml'
 
 def establish_connection!
   database_config_file   = File.join File.dirname(__FILE__), 'database.yml'

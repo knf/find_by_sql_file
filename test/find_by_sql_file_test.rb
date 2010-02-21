@@ -1,12 +1,3 @@
-require 'test/unit'
-require 'rubygems'
-
-begin
-  require 'redgreen'
-rescue LoadError
-  puts "Install the 'redgreen' gem to get color output"
-end
-
 require File.join(File.dirname(__FILE__), 'test_helper')
 
 class FindBySqlFileTest < Test::Unit::TestCase
