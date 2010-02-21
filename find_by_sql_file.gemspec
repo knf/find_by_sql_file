@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'find_by_sql_file'
-  s.version     = '0.9.5'
-  s.date        = '2008-10-06'
+  s.version     = '0.9.9'
+  s.date        = '2010-2-21'
 
   s.author      = 'Jordi Bunster'
   s.email       = 'jordi@bunster.org'
@@ -16,38 +16,30 @@ Gem::Specification.new do |s|
 
   s.test_files  = %w[
     test
-    test/database.yml
     test/find_by_sql_file_test.rb
-    test/mock_rails_root
-    test/mock_rails_root/app
-    test/mock_rails_root/app/queries
-    test/mock_rails_root/app/queries/articles
-    test/mock_rails_root/app/queries/articles/all.sql
-    test/mock_rails_root/app/queries/articles/count_all.sql
-    test/mock_rails_root/app/queries/articles/last_updated.sql
-    test/mock_rails_root/app/queries/articles/with_erb_fields.sql
-    test/mock_rails_root/app/queries/articles/with_variables.sql
-    test/schema.rb
+    test/rails_root_fixture
+    test/rails_root_fixture/app
+    test/rails_root_fixture/app/queries
+    test/rails_root_fixture/app/queries/articles
+    test/rails_root_fixture/app/queries/articles/all.sql
+    test/rails_root_fixture/app/queries/articles/count_all.sql
+    test/rails_root_fixture/app/queries/articles/last_updated.sql
+    test/rails_root_fixture/app/queries/articles/with_erb_fields.sql
+    test/rails_root_fixture/app/queries/articles/with_variables.sql
     test/test_helper.rb
   ]
 
   s.files = %w[ MIT-LICENSE
-                README.markdown
+                README.rdoc
                 Rakefile
                 WHATSNEW
                 find_by_sql_file.gemspec
-                init.rb
-                install.rb
                 lib
-                lib/bunster
-                lib/bunster/erb_jacket.rb
-                lib/bunster/find_by_sql_file.rb
                 lib/find_by_sql_file.rb
-                lib/jordi-find_by_sql_file.rb
                 rails
                 rails/init.rb ]
 
   s.has_rdoc         = true
-  s.extra_rdoc_files = %w[ README.markdown        ]
-  s.rdoc_options     = %w[ --main README.markdown ]
+  s.extra_rdoc_files = %w[ README.rdoc        ]
+  s.rdoc_options     = %w[ --main README.rdoc ]
 end
