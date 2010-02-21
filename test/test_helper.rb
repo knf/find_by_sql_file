@@ -1,12 +1,12 @@
-require 'rubygems'
 require 'test/unit'
-require 'active_record'
 require 'yaml'
+require 'rubygems'
+require 'active_record'
 
 begin
   require 'leftright'
 rescue LoadError
-  puts "Install the 'leftright' gem to get awesome test output"
+  puts "Install the 'leftright' gem (optional) to get awesome test output"
 end
 
 def establish_connection!
