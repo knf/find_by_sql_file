@@ -1,5 +1,8 @@
 require File.dirname(__FILE__) + '/test_helper'
 
+class Article < ActiveRecord::Base
+end
+
 class FindBySqlFileTest < Test::Unit::TestCase
 
   def test_counting_by_sql_file
