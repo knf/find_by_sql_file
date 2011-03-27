@@ -17,7 +17,7 @@ You can pass a symbol that refers to a query file:
 
   Elephant.find_by_sql :massive_weight
 
-Query files are assumed to be save as:
+Query files are assumed to be saved as:
 
   Rails.root/app/queries/TABLE_NAME/SYMBOL.sql
 
