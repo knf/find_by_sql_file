@@ -39,7 +39,7 @@ module FindBySqlFile
       injected_locals = bound_variables.delete(:inject!) || []
 
       query = ERBJacket.wrap File.read(file_name), injected_locals
-      # query = replace_named_bind_variables(query, bound_variables)
+      query = replace_named_bind_variables(query, bound_variables)
 
       query.gsub(/-- .*/, '').strip.gsub(/\s+/, ' ')
     else
