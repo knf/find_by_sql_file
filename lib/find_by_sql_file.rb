@@ -35,11 +35,11 @@ module FindBySqlFile
       file_name = Rails.root.join 'app', 'queries',
         (table_name rescue 'application'), (query_or_symbol.to_s + '.sql')
 
-      bound_variables = HashWithIndifferentAccess.new(opts).symbolize_keys!
+      # bound_variables = HashWithIndifferentAccess.new(opts).symbolize_keys!
       injected_locals = bound_variables.delete(:inject!) || []
 
       query = ERBJacket.wrap File.read(file_name), injected_locals
-      query = replace_named_bind_variables(query, bound_variables)
+      # query = replace_named_bind_variables(query, bound_variables)
 
       query.gsub(/-- .*/, '').strip.gsub(/\s+/, ' ')
     else
